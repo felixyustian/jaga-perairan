@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>JAGA PERAIRAN — Demo Deteksi HAB</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div class="brand">JAGA PERAIRAN</div>
+  <div class="sub">Deteksi dini ledakan alga berbahaya (HAB) — <em>demo sisi-klien</em></div>
+</header>
+<div class="note">
+  Demo ini membangkitkan citra mikroskop sintetis lalu mendeteksi partikel di
+  browser dengan thresholding + connected-components, mengklasifikasi berdasarkan
+  ukuran. Detektor produksi (model terlatih untuk spesies) berjalan di layanan
+  Python repo ini — bukan di halaman ini.
+</div>
+<main>
+  <section class="controls">
+    <label>Kepadatan spesies berbahaya
+      <input id="harm" type="range" min="0" max="40" value="12" />
+      <span id="harm_v">12</span>
+    </label>
+    <label>Partikel benign
+      <input id="ben" type="range" min="0" max="80" value="35" />
+      <span id="ben_v">35</span>
+    </label>
+    <label>Seed <input id="seed" type="number" value="3" style="width:70px" /></label>
+    <button id="run">Deteksi</button>
+    <div id="alert" class="alertbox"></div>
+  </section>
+  <section class="viz">
+    <canvas id="cv" width="512" height="512"></canvas>
+    <div class="stats" id="stats"></div>
+  </section>
+</main>
+<footer>Data sintetis · klasifikasi berbasis ukuran untuk demonstrasi · produksi memakai model spesies terlatih.</footer>
+<script src="app.js"></script>
+</body>
+</html>

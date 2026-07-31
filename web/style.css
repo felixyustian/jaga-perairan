@@ -1,0 +1,26 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color: #1f2937; background: #f7faf8; }
+header { padding: 20px 24px 8px; }
+.brand { font-size: 26px; font-weight: 800; color: #155E63; letter-spacing: .5px; }
+.sub { color: #556; font-size: 14px; }
+.note { margin: 8px 24px; padding: 10px 14px; background: #e8f2f3; border-left: 4px solid #155E63; border-radius: 4px; font-size: 13px; color: #234b4f; }
+main { display: flex; flex-wrap: wrap; gap: 20px; padding: 12px 24px; }
+.controls { display: flex; flex-direction: column; gap: 14px; min-width: 230px; }
+.controls label { font-size: 13px; font-weight: 600; display: flex; flex-direction: column; gap: 4px; }
+button { background: #155E63; color: #fff; border: 0; padding: 10px; border-radius: 6px; font-weight: 700; cursor: pointer; }
+button:hover { background: #0f484c; }
+.alertbox { padding: 12px; border-radius: 8px; text-align: center; }
+.alertbox .alvl { font-weight: 800; font-size: 18px; }
+.alertbox .amsg { font-size: 12px; margin-top: 4px; }
+.alertbox.ok { background: #e6f4ea; color: #1E7A46; }
+.alertbox.warn { background: #fef6e0; color: #b7791f; }
+.alertbox.danger { background: #fdecea; color: #b02e4a; }
+canvas { border: 1px solid #dbe5df; border-radius: 8px; background: #fff; }
+.stats { min-width: 220px; }
+.stats table { border-collapse: collapse; width: 100%; font-size: 14px; }
+.stats td { padding: 6px 8px; border-bottom: 1px solid #eee; }
+.stats td:last-child { text-align: right; }
+.legend { margin-top: 12px; font-size: 12px; color: #556; }
+.sw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: middle; }
+.sw.harm { background: #b02e4a; } .sw.ben { background: #0E6E6E; }
+footer { padding: 14px 24px; color: #889; font-size: 12px; }
